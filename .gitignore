@@ -7,3 +7,5 @@ bot1.py
 bot.py
 *.pdf
 application.py
+*.out
+*.log
