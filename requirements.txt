@@ -1,0 +1,9 @@
+beautifulsoup4==4.11.1
+deep_translator==1.11.4
+python-dotenv==1.0.0
+python-telegram-bot==20.6
+Requests==2.31.0
+schedule==1.2.1
+selenium==4.13.0
+translators==5.8.7
+webdriver_manager==4.0.1
