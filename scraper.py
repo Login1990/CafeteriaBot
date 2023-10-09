@@ -104,5 +104,5 @@ def scraper():
 #for x in y:
     #print(GoogleTranslator(source='fi', target='en').translate(x))
 #print(GoogleTranslator(source='fi', target='en').translate(x[0]))
-#if __name__ == "__main__":
-scraper()
+if __name__ == "__main__":
+    scraper()
