@@ -1,0 +1,9 @@
+.env
+.vscode
+__pycache__
+test.py
+relevant_data.json
+bot1.py
+bot.py
+*.pdf
+application.py
