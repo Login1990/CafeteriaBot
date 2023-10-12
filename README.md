@@ -36,13 +36,18 @@ These assume that you have Python 3.10.7 or higher and pip installed.
 
 1. Clone the repository OR download a .ZIP
 2. Unpack with 7-Zip in some folder, ex. CafeteriaBot, skip if you cloned the repo
-3. 
-4. Go to your Telegram and find [@BotFather](https://t.me/BotFather) 
-5. Enter ```/newbot``` and follow instructions
-6. After you create a bot, you should recieve a HTTP API token, copy it: 
+3. Open your equivalent to Command Line in the directory:
+For Windows users: Click RMB in the directory of the repo and click "Open in Terminal"
+And enter this:
+```
+pip install -r requirements.txt
+```
+5. Go to your Telegram and find [@BotFather](https://t.me/BotFather) 
+6. Enter ```/newbot``` and follow instructions
+7. After you create a bot, you should recieve a HTTP API token, copy it: 
 ![Example](https://github.com/Login1990/CafeteriaBot/assets/79404334/fde9e0cb-f030-4369-bb22-97f7b3e1a71e)
-7. Create a .env file in the same directory as you unpacked/cloned
-8. Open this file and add following:
+8. Create a .env file in the same directory as you unpacked/cloned
+9. Open this file and add following:
 ```
 API_KEY="[YOUR API KEY]"
 ```
