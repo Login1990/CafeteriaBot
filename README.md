@@ -3,6 +3,7 @@ Basically, CafeteriaBot is a Telegram Bot that allows to look up what is on the 
 It allows user to look the menu on every day of the current week.
 
 As per writing this (12.10.2023), the bot is **online** [here](https://t.me/lahti_cafeteria_bot)
+
 However, Amazon AWS gives me only so much time to host it for free, so eventually it will go offilne if I don't get external funding.
 
 The bot is separated in 3 parts:
