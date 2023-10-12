@@ -7,6 +7,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.service import Service as ChromeService
 import requests
 #import translators as ts
 from deep_translator import GoogleTranslator
@@ -31,12 +32,12 @@ import json
 def scraper():
     days = []
     options = Options()
-    options.headless = True
+    options.add_argument('--headless')
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-gpu')
     options.add_argument("--window-size=1920,1200")
-    driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
     driver.get("https://www.compass-group.fi/ravintolat-ja-ruokalistat/foodco/kaupungit/lahti/isku-center/")
-    #x = driver.find_element(By.ID, "menuContainer")
-    #y = driver.find_elements(By.CLASS_NAME,"lunch-menu-block__manual-menu compass-rich-text")
     print()
     for _ in range(5):  # Adjust the number of times you want to scroll as needed
         driver.find_element(By.TAG_NAME, 'body').send_keys(Keys.END)
