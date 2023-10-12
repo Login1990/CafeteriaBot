@@ -94,10 +94,8 @@ async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE): #
         except IndexError:
             await context.bot.send_message(chat_id=update.effective_chat.id, text="Today there is no menu.")
 if __name__ == '__main__':
-    #print(information) #debug
-    #print(len(information))
     load_dotenv()
-    api_token = os.getenv("API_KEY")
+    api_token = os.getenv("API_KEY") #Purely theorethically, you can enter your API_KEY right here, but it is a bad practice to add credentials to code directly
     application = ApplicationBuilder().token(api_token).build() #Building the app, token is private
     start_handler = CommandHandler('start', start) #This command stands that now if you type /start in chat, you activate start() function
     message_handler = MessageHandler(filters.TEXT & (~filters.COMMAND), message_handler) #Everything that is not a command, is thrown against the message_handler function

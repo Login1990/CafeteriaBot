@@ -13,7 +13,6 @@ def run_daily_script():
 
 def run_script():
     try:
-        # Replace 'daily_script.py' with the actual name of your script
         subprocess.run(["python", "scraper.py"])
     except Exception as e:
         print(f"An error occurred while running the script: {e}")
