@@ -23,7 +23,6 @@ def clean_tags():
     for x in range(len(dirty_list)):
         soup = BeautifulSoup(dirty_list[x], 'html.parser')
         dirty_list[x] = soup.get_text()
-    print(len(dirty_list))
     with open('relevant_data.json', 'w') as file:
         json.dump(dirty_list, file)
     return dirty_list

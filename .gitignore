@@ -9,3 +9,5 @@ bot.py
 application.py
 *.out
 *.log
+scheduler.py
+scraper.py
