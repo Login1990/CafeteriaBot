@@ -27,7 +27,7 @@ logging.basicConfig( #No idea, leave it be
 options = ["Cafeteria Menu","Today","Monday","Tuesday","Wendsday","Thursday","Friday"]
 #print(help(ts.deepl))
 
-
+    
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE): #When you start with bot 
     buttons = [[KeyboardButton(options[0]),KeyboardButton("Tell me about me")]]
     await context.bot.send_message(chat_id=update.effective_chat.id, text="Welcome to my bot!\nThis bot is displaying a menu for this week in LUT Lahti Campus", reply_markup=ReplyKeyboardMarkup(buttons))

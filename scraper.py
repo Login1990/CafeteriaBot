@@ -53,5 +53,7 @@ def scraper():
         json.dump(list_of_elements, file)
     return list_of_elements
 
+
+
 if __name__ == "__main__":
     scraper()
