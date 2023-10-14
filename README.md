@@ -6,7 +6,7 @@ As per writing this (12.10.2023), the bot is **online** [here](https://t.me/laht
 
 However, Amazon AWS gives me only so much time to host it for free, so eventually it will go offilne if I don't get external funding.
 
-The bot is separated in 3 parts:
+The bot is separated in 2 parts:
 
 * The bot
 * Menu fetch 
