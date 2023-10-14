@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 def fetch_menu_data():
     global latest_menu_data, last_menu_fetch
     date = datetime.datetime.now()
+    date = date + datetime.timedelta(days=3)
     date = date.strftime('%Y-%m-%d')
     response_API = requests.get(f"https://www.compass-group.fi/menuapi/week-menus?costCenter=3424&date={date}&language=fi")
     y = json.loads(response_API.text)
