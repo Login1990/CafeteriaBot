@@ -59,3 +59,7 @@ Yay! You are done!
 ## Future plans
 
 As you may know, besides the ISKU cafeteria there is also Niemi campus with actually decent food. I don't have any knowledge if they post it anywhere - but if they do, I will try to implement it ASAP.
+
+## Contacts
+
+Feel free to open issues or contact me directly at shamin2002@mail.ru
