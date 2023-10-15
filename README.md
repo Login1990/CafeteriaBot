@@ -62,4 +62,4 @@ As you may know, besides the ISKU cafeteria there is also Niemi campus with actu
 
 ## Contacts
 
-Feel free to open issues or contact me directly at shamin2002@mail.ru
+Feel free to open issues or contact me directly at diamoindforever@mail.ru
