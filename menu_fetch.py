@@ -13,11 +13,8 @@ def fetch_menu_data():
     return y
 
 def parse_json():
-    list = []
-    json_data = fetch_menu_data()
-    for x in range(0, 5):
-        list.append(json_data["menus"][x]["html"])
-    return list
+    list1 = [fetch_menu_data()["menus"][x]["html"] for x in range(5)]
+    return list1
 
 def clean_tags():
     dirty_list = parse_json()
