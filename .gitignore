@@ -2,7 +2,7 @@
 .vscode
 __pycache__
 test.py
-relevant_data.json
+*.json
 bot1.py
 bot.py
 *.pdf
@@ -10,4 +10,4 @@ application.py
 *.out
 *.log
 scheduler.py
-scraper.py
+*.html
