@@ -6,30 +6,27 @@ As per writing this (12.10.2023), the bot is **online** [here](https://t.me/laht
 
 However, Amazon AWS gives me only so much time to host it for free, so eventually it will go offilne if I don't get external funding.
 
-The bot is separated in 3 parts:
+The bot is separated in 2 parts:
 
-* The scraper
 * The bot
-* ~~And the ugly~~
-* And the scheduler
+* Menu fetch 
 
-### Scraper
+### Menu fetch
 
-The scraper interacts with JavaScript on the ISKU website where menu is posted each week 
+The menu fetch uses menuapi from the ISKU website to pull information from API used
 
 [Link to the menu website](https://www.compass-group.fi/ravintolat-ja-ruokalistat/foodco/kaupungit/lahti/isku-center/)
 
 And scrapes the menu as a Python list wihich then stored locally as a .json
 
-NB! As per writing this (12.10.2023), the scraper works - however I have written in 2 times all over because ISKU keeps changing their website.
 
 ### Bot
 
 Bot interacts with Telegram API through Python Telegram library and fetches a list from the .json
 
-### Scheduler
+### ~~Scheduler~~
 
-Is a simple module that refreshes fetched .json every day at 2:00
+Scheduling is done with ```cron``` on Linux or Task Scheduler on Windows
 
 ## How to set it up on my machine?
 
@@ -53,8 +50,9 @@ pip install -r requirements.txt
 ```
 API_KEY="[YOUR API KEY]"
 ```
-9. After that, you simply need to launch 2 scripts at the same time: ```scheduler.py``` and ```the_bot.py```, it will require 2 terminals as both of these scripts are blocking code
-~~OR wait until I will fix it, works fine rn~~
+9. Run ```the_bot.py```
+10. Script ```menu_fetch.py``` will fetch a .json with data, the menus are posted on Saturday for next week.
+11. You will need to schedule this task weekly for automatic menu refreshment
 
 Yay! You are done!
 
@@ -62,4 +60,6 @@ Yay! You are done!
 
 As you may know, besides the ISKU cafeteria there is also Niemi campus with actually decent food. I don't have any knowledge if they post it anywhere - but if they do, I will try to implement it ASAP.
 
-The code is being run in 2 terminals which is unoptimal. ~~but fine~~ so I will try to address it later.
+## Contacts
+
+Feel free to open issues or contact me directly at diamoindforever@mail.ru
