@@ -102,7 +102,6 @@ async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE): #
         except IndexError:
             await context.bot.send_message(chat_id=update.effective_chat.id, text="Today there is no menu.")
     elif options_niemi[2] in update.message.text:
-        await context.bot.send_message(chat_id=update.effective_chat.id, text=information_niemi)
         await context.bot.send_message(chat_id=update.effective_chat.id, text=information_niemi[0])
     elif options_niemi[3] in update.message.text:
         await context.bot.send_message(chat_id=update.effective_chat.id, text=information_niemi[1])
@@ -110,7 +109,7 @@ async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE): #
         await context.bot.send_message(chat_id=update.effective_chat.id, text=information_niemi[2])
     elif options_niemi[5] in update.message.text:
         await context.bot.send_message(chat_id=update.effective_chat.id, text=information_niemi[3])
-    elif options_niemi[5] in update.message.text:
+    elif options_niemi[6] in update.message.text:
         await context.bot.send_message(chat_id=update.effective_chat.id, text=information_niemi[4])
     else:
         await context.bot.send_message(chat_id=update.effective_chat.id, text="Unknown command, try using /start")
