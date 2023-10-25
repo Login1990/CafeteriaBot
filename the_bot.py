@@ -102,6 +102,7 @@ async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE): #
         except IndexError:
             await context.bot.send_message(chat_id=update.effective_chat.id, text="Today there is no menu.")
     elif options_niemi[2] in update.message.text:
+        await context.bot.send_message(chat_id=update.effective_chat.id, text=information_niemi)
         await context.bot.send_message(chat_id=update.effective_chat.id, text=information_niemi[0])
     elif options_niemi[3] in update.message.text:
         await context.bot.send_message(chat_id=update.effective_chat.id, text=information_niemi[1])
@@ -111,6 +112,8 @@ async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE): #
         await context.bot.send_message(chat_id=update.effective_chat.id, text=information_niemi[3])
     elif options_niemi[5] in update.message.text:
         await context.bot.send_message(chat_id=update.effective_chat.id, text=information_niemi[4])
+    else:
+        await context.bot.send_message(chat_id=update.effective_chat.id, text="Unknown command, try using /start")
 if __name__ == '__main__':
     load_dotenv()
     api_token = os.getenv("API_KEY") #Purely theorethically, you can enter your API_KEY right here, but it is a bad practice to add credentials to code directly

@@ -53,4 +53,4 @@ def scraper():
     return segments
 
 if __name__ == "__main__":
-    scraper()
+    print(scraper())
