@@ -2,6 +2,7 @@ import requests
 import json
 import datetime
 from bs4 import BeautifulSoup
+from scraper import scraper
 
 def fetch_menu_data():
     global latest_menu_data, last_menu_fetch
@@ -25,5 +26,9 @@ def clean_tags():
         json.dump(dirty_list, file)
     return dirty_list
 
-if __name__ == "__main__":
+def dump_json():
     clean_tags()
+
+if __name__ == "__main__":
+    dump_json()
+    scraper()
