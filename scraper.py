@@ -48,9 +48,9 @@ def scraper():
         segments[x] += "\n"+segments[-1] 
     segments = segments[:5]
     with open('relevant_data_niemi.json', 'w') as file:
-        json.dump(text_list, file)
+        json.dump(segments, file)
 
     return segments
 
 if __name__ == "__main__":
-    print(scraper())
+    scraper()
