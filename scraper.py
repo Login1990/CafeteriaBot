@@ -38,9 +38,19 @@ def scraper():
 
     text_list = text_list[4:]
 
+    segments = []
+
+    # Iterate through the list in segments
+    for i in range(0, len(text_list), 3):
+        segment = text_list[i:i + 3]
+        segments.append("\n".join(segment))
+    for x in range(len(segments)-1):
+        segments[x] += "\n"+segments[-1] 
+    segments = segments[:5]
     with open('relevant_data_niemi.json', 'w') as file:
         json.dump(text_list, file)
 
-    return text_list
+    return segments
+
 if __name__ == "__main__":
     scraper()

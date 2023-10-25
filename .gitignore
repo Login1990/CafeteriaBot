@@ -11,3 +11,4 @@ application.py
 *.log
 scheduler.py
 *.html
+.vs

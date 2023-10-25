@@ -13,7 +13,7 @@ The bot is separated in 2 parts:
 
 ### Menu fetch
 
-The menu fetch uses menuapi from the ISKU website to pull information from API used
+The menu fetch uses menuapi from the ISKU website to pull information_mukkulankatu from API used
 
 [Link to the menu website](https://www.compass-group.fi/ravintolat-ja-ruokalistat/foodco/kaupungit/lahti/isku-center/)
 
