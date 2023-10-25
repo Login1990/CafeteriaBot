@@ -42,7 +42,7 @@ async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE): #
         information_niemi = json.load(file)
     if "Tell me about me" in update.message.text:
         await context.bot.send_message(chat_id=update.effective_chat.id, text=f"Here is all what I can get on you:\nYour username: {user['username']}\nYour user id: {user['id']}\nYour name: {user['first_name']}\nYour surname: {user['last_name']}")
-    if "<- Back" in update.message.text:
+    elif "<- Back" in update.message.text:
         buttons = [[KeyboardButton(options_lahti[0]), KeyboardButton(options_niemi[0]),KeyboardButton("Tell me about me")]]
         await context.bot.send_message(chat_id=update.effective_chat.id, text="Welcome to my bot!\nThis bot is displaying a menu for this week in LUT Lahti Campus", reply_markup=ReplyKeyboardMarkup(buttons))
     elif options_lahti[0] in update.message.text:
