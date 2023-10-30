@@ -20,7 +20,6 @@ def scraper():
     soup = BeautifulSoup(web.text, "html.parser")
 
     element = soup.find("div", {"data-id": "eb498b1"})
-    print(element)
     index = element.text.find("STUDENT´S WEEK")
     result = element.text[index:]
 
