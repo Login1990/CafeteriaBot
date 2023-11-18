@@ -20,7 +20,7 @@ def scraper():
     soup = BeautifulSoup(web.text, "html.parser")
 
     element = soup.find("div", {"data-id": "eb498b1"})
-    index = element.text.find("MENU FOR THE STUDENT´S")
+    index = element.text.find("MENU FOR THE STUDE`S")
     result = element.text[index:]
 
     pattern = r'(\d+(?:,\d+)*)'
