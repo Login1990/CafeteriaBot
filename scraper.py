@@ -14,7 +14,7 @@ import json
 import re
 
 def scraper():
-    # Here we are opening an ISKU website with no graphics, just pure data, but we have to load it since intersting data is provided by JavaScript
+    
     web = req.get("https://www.pottusalvia.com/index.php/viikon-ruokalista/")
 
     soup = BeautifulSoup(web.text, "html.parser")
